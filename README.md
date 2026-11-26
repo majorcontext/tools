@@ -1,6 +1,6 @@
 # tools
 
-Go test and lint tooling that the majorcontext repositories share.
+Go test and lint tools that the majorcontext repositories share.
 
 | Path | What it does |
 |---|---|
