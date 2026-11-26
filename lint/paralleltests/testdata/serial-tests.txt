@@ -1,0 +1,6 @@
+# package TestName reason
+a TestSerialListed it sets a process-wide value
+a TestListedNoReason
+a TestListedButParallel it was serial once
+a TestGone the test was deleted
+other TestElsewhere belongs to another package

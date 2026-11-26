@@ -1,0 +1,10 @@
+# Time budgets for go test, read by cmd/testtime. See cmd/testtime for the line formats.
+leaf 10
+package default 10
+
+# The analysistest suites type-check their testdata with the race detector.
+package lint/paralleltests 15
+package lint/wallclock 15
+
+# Measured on the reference runner; read the line "Calibration: ..." of a run to update it.
+calibrate 0.037

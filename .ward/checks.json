@@ -1,0 +1,6 @@
+{
+  "checks": [
+    {"name": "static", "run": ["sh", "-c", "go build ./... && go vet ./... && go run ./cmd/lint ./... && test -z \"$(gofmt -l .)\""], "timeout_seconds": 600},
+    {"name": "budget", "run": ["sh", "-c", "f=$(mktemp) && GORACE=atexit_sleep_ms=0 go test -race -count=1 -p 1 -json ./... > \"$f\"; a=$?; go run ./cmd/testtime -title Unit -job go -time-allowance 1.15 < \"$f\"; b=$?; rm -f \"$f\"; test $a -eq 0 && test $b -eq 0"], "timeout_seconds": 900}
+  ]
+}
